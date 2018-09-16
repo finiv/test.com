@@ -68,29 +68,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Our articles2:</h1>
+	<h1>Register:</h1>
 
 	<div id="body">
 	<fieldset>
     <legend>Login details:</legend>
 
-    <div class="login">
-		<form>
-        <label for="uname">Username:</label>
-        <input type="text" id="uname" name="uname" 
-               placeholder="Your login" />
-		<span class="validity"></span><br>
-		<label for="password">Password:</label>
-		<input type="text" id="password" name="password"
-				placeholder="Your password"><br>
-		<input type="button" value="Log in">
-		</form>
-	</div>
-	
-	<hr>
-
 	<div class="registration-form">
-		<form action="<?=base_url();?>" method="post">
+		<form action="<?=base_url();?>reg" method="post">
 			<label for="fname">Firstname:</label>
 			<input type="text" id="firstname" name="fname" 
 				placeholder="Your firstname" /><br>
@@ -114,8 +99,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </fieldset>
 		
 	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
 
 </body>

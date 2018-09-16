@@ -68,51 +68,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Our articles2:</h1>
+	<h1>Our articles:</h1>
 
 	<div id="body">
-	<fieldset>
-    <legend>Login details:</legend>
 
-    <div class="login">
-		<form>
-        <label for="uname">Username:</label>
-        <input type="text" id="uname" name="uname" 
-               placeholder="Your login" />
-		<span class="validity"></span><br>
-		<label for="password">Password:</label>
-		<input type="text" id="password" name="password"
-				placeholder="Your password"><br>
-		<input type="button" value="Log in">
-		</form>
-	</div>
-	
-	<hr>
+		<?php foreach($articles as $article) { ?>
+			<p><?= $article['title'];?></p>
+			<code><?php echo $article['body'];?></code>
+		<?php } ?>
 
-	<div class="registration-form">
-		<form action="<?=base_url();?>" method="post">
-			<label for="fname">Firstname:</label>
-			<input type="text" id="firstname" name="fname" 
-				placeholder="Your firstname" /><br>
-			<label for="sname">Secondname:</label>
-			<input type="text" id="secondname" name="sname"
-					placeholder="Your secondname"><br>
-			<label for="email">E-mail:</label>
-			<input type="text" id="email" name="email"
-					placeholder="Your e-mail"><br>
-			<span class="validity"></span><br>
-			<label for="password">Password:</label>
-			<input type="text" id="password" name="password"
-					placeholder="Your password"><br>
-			<label for="cpassword">Confirm password:</label>
-			<input type="text" id="cpassword" name="cpassword"
-					placeholder="Confirm password"><br>
-			<input type="submit" value="Registrate">
-		</form>
-	</div>
-
-</fieldset>
-		
+		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
